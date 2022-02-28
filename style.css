@@ -1,0 +1,136 @@
+* {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+}
+
+.myInput {
+	box-sizing: border-box;
+	position: relative;
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+	padding: 0.4rem;
+	border: 1px solid #ddd;
+	transition: all 0.3s linear;
+}
+
+.myInput:focus {
+	outline: 3px solid #ddd;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.options {
+	position: absolute;
+	width: 100%;
+	display: none;
+	overflow-y: auto;
+	max-height: 200px;
+	border: 1px solid #ddd;
+}
+
+.dropdown-content {
+	position: relative;
+	min-width: 230px;
+	max-width: 320px;
+	max-height: 200px;
+	z-index: 1;
+}
+.select-item {
+	transition: background 0.2s linear;
+	cursor: pointer;
+}
+
+.dropdown-content .select-item {
+	border-bottom: 1px solid rgb(212, 212, 212);
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.input-wrapper {
+	background-color: rgb(81, 190, 233);
+	position: relative;
+	width: 100%;
+}
+
+.icon-holder {
+	position: absolute;
+	display: inline;
+	top: 0.4rem;
+	right: 0.1rem;
+}
+
+.select-item:hover {
+	background-color: rgb(201, 201, 201);
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.icon {
+	cursor: pointer;
+	width: 1rem;
+	height: 1rem;
+}
+
+.myInput.error {
+	border: 1px solid red;
+	color: red;
+}
+
+.myInput.error::placeholder {
+	color: red;
+}
+
+.selected-item {
+	padding: 0.2rem;
+	background-color: rgb(236, 236, 236);
+	font-size: 0.7rem;
+	border-radius: 4px;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+.selected-item:hover {
+	background-color: rgb(212, 212, 212);
+}
+
+.selected-items {
+	max-width: 100%;
+	height: 100%;
+	resize: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+}
